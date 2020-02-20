@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>JJ Contact</title>
+    <style>
+        body {
+            background-image: url(cntct.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            padding-left: 30%;
+        }
+
+        p {
+            font-family: 'Pacifico', cursiv;
+            color: #fc4445;
+            font-size: 25px;
+        }
+
+        input {
+            height: 30px;
+            padding: 8px;
+            background: #fae596;
+            border: none;
+        }
+
+        input::placeholder {
+            color: #557a95;
+            font-family: cursive;
+            font-size: 15px;
+            font-weight: 600;
+            opacity: .6;
+        }
+
+        input[type=submit] {
+            position: relative;
+            top: 45px;
+            right: 304px;
+            height: 30px;
+            width: 100px;
+            background: #da5f15;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            font-family: 'Pacifico', cursive;
+            color: aquamarine;
+            box-shadow: 6px 6px 4px;
+            border-radius: 5px;
+            padding-bottom: 38px;
+            transition: .1s;
+        }
+
+        input[type=submit]:active {
+            transform: translateX(5px) translateY(5px) translateZ(5px);
+            box-shadow: 1px 1px 4px;
+            transition: .1s;
+        }
+
+        textarea {
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="Form">
+        <p>Enter You Name : <input type="text" placeholder="Andre Shaun"></p>
+        <p>Enter You E-Mail : <input type="email" placeholder="Andre@gmail.com"></p>
+        <p>Enter You Phone Number : <input type="number" placeholder="+91 8282"></p>
+        <p>Write Your Review : - </p>
+        <textarea style="height: 100px;width: 300px;" placeholder="Your Reviews Are Valuble To Us"></textarea>
+        <input type="submit" ondblclick="location.href='Cnkt.html'">
+    </div>
+
+</body>
+
+</html>
