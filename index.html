@@ -17,7 +17,6 @@
             width: 100%;
             background-attachment: fixed;
         }
-
         #HeadBar {
             height: 5.2%;
             width: 100%;
@@ -25,13 +24,13 @@
             font-family: 'Pacifico', cursive;
             background: #272727;
             padding: 2px 0px 18px 50px;
-            font-size: 170%;
+            font-size: 165%;
             position: absolute;
             margin: 0px;
             top: 0px;
             left: 0px;
         }
-
+        
         #Products {
             color: #ff9914;
             max-height: 5.2%;
@@ -334,26 +333,32 @@
         @keyframes loaders {
             0% {
                 width: 0%;
+                background-color: rgba(41,243,223,.6);
             }
 
             50% {
-                width: 50%
+                width: 50%;
+                background-color: rgba(225, 0, 120, 0.6);    
             }
 
             65% {
-                width: 70%
+                width: 70%;
+                background-color: rgba(41,243,223,.6);
             }
 
             75% {
                 width: 40%;
+                background-color: rgba(225, 0, 120, 0.6);
             }
 
             90% {
-                width: 100%
+                width: 100%;   
+                background-color: rgba(41,243,223,.6);
             }
 
             100% {
-                width: 100%
+                width: 100%;
+                 background-color: rgba(41,243,223,.6);   
             }
         }
 
@@ -434,7 +439,15 @@
     </style>
 </head>
 
-<body>
+<body onload="stir0()">
+     <script>
+
+ function stir0(){setTimeout(function func(){
+ var bbs = new Audio('welcome.mp3');
+ bbs.play();},3000);
+ }
+
+ </script>
     <div id="HeadBar">JJ Industries</div>
     <div id="PrdDrp">
         <div id="Products">Products</div>
