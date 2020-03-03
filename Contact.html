@@ -13,7 +13,16 @@
             width: 100%;
             padding-left: 30%;
         }
-
+        #form{
+        min-height: 450px;
+            max-height: 500px;
+            background: rgba(192,192,192,.6);
+            width: 500px;
+            padding-left: 50px;
+            border-radius: 30px;
+            margin-top: 60px;
+            
+        }
         p {
             font-family: 'Pacifico', cursiv;
             color: #fc4445;
@@ -25,6 +34,7 @@
             padding: 8px;
             background: #fae596;
             border: none;
+            border-radius: 5px;
         }
 
         input::placeholder {
@@ -75,9 +85,17 @@
         <p>Enter You Phone Number : <input type="number" placeholder="+91 8282"></p>
         <p>Write Your Review : - </p>
         <textarea style="height: 100px;width: 300px;" placeholder="Your Reviews Are Valuble To Us"></textarea>
-        <input type="submit" onmouseup="location.href='Cnkt.html'">
+        <input type="submit" onmouseup="fc()">
     </div>
-
+<script>
+    function fc(){
+    setTimeout(
+        function(){
+          window.location = "Cnkt.html" 
+        }, 500);    
+        
+    }
+    </script>
 </body>
 
 </html>
