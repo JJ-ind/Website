@@ -35,6 +35,36 @@
     body{
         background:#66fcf1; 
     }
+      hr{
+        min-height: 35px;
+        background: orange;
+        width: 110%;
+        margin: 10px;
+        position: relative;
+        right:18px;
+        border:none;
+        transition: .4s; 
+    }
+    hr:hover{
+        min-height: 80px;
+        background: orange;
+        border:none;
+        transition: .4s;
+        position: relative;
+        
+    }
+    #gohome{
+        position: absolute;
+        top: 214%;
+        left:50px;
+        margin-right:0px;
+        margin-left: 10px;
+        color:greenyellow;
+        display: none;
+    }
+    hr:hover ~ #gohome{
+        display: block;
+    }   
     </style>
 <title>JJ Camphor</title>    
 </head>
@@ -98,6 +128,7 @@
     Type : Non-Scented.
     <br>
     Packings : Box.
-    </p></div>     
+    </p></div> 
+    <hr onclick="location.href='index.html'"><p id="gohome">To Goto Home Click Here</p>
 </body>
 </html>

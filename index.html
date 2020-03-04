@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <title>JJ Indutries</title>
     <style>
+        
         body {
             background-image: url(home_banner_1.png);
             background-position: center;
@@ -48,6 +49,7 @@
             transition: .4s;
             font-family: 'Pacifico', cursive;
             border-radius: 15px 15px 0px 0px;
+            margin:0px;
         }
 
         #Contact {
@@ -104,8 +106,9 @@
         }
 
         #Hl {
-            height: .9%;
+            min-height: .9%;
             width: 100%;
+            max-height: 1.2%;
             background: linear-gradient(to left, red, #15db95 50%, red);
             position: absolute;
             top: 50px;
@@ -116,18 +119,21 @@
 
         #Gallery:hover+#Hl {
             background: linear-gradient(to left, red, #15db95 35%, blue);
-            height: 2%;
+            min-height: 2%;
+            max-height: 2.4%;
             transition: .4s;
         }
 
         #PrdDrp:hover~#Hl {
             background: linear-gradient(to left, blue, #15db95 65%, red);
-            height: 2%;
+            min-height: 2%;
+            max-height: 2.4%;
             transition: .4s;
         }
 
         #Conta:hover~#Hl {
-            height: 2%;
+            min-height: 2%;
+            max-height: 2.4%;
             transition: .4s;
         }
 
