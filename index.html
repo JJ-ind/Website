@@ -1,514 +1,215 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-    <title>JJ Indutries</title>
-    <style>
-        
-        body {
-            background-image: url(home_banner_1.png);
+<title>JJ Industries</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+<style>
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    body{
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
             width: 100%;
             background-attachment: fixed;
-        }
-        #HeadBar {
-            height: 5.2%;
-            width: 100%;
-            color: #ff652f;
-            font-family: 'Pacifico', cursive;
-            background: #272727;
-            padding: 2px 0px 18px 50px;
-            font-size: 165%;
+            margin: 0;
             position: absolute;
-            margin: 0px;
-            top: 0px;
-            left: 0px;
-        }
+            right:-8px;
+        top:8px;
         
-        #Products {
-            color: #ff9914;
-            max-height: 5.2%;
-            min-width: 13%;
-            max-width: 14%;
-            background: #15db95;
-            position: absolute;
-            left: 28%;
-            top: 5px;
-            text-align: center;
-            padding-top: 9px;
-            padding-bottom: 10px;
-            font-size: 130%;
-            cursor: pointer;
-            transition: .4s;
-            font-family: 'Pacifico', cursive;
-            border-radius: 15px 15px 0px 0px;
-            margin:0px;
+    }
+    #nvbr{
+        display: flex;
+        height:10vh;
+        width: 100vw;
+        position: fixed;
+        margin: 0;
+        top:0px;
+        left:0px;
+        justify-content: space-between;
+        transition: .4s;
+        overflow: visible;
+        opacity: 1;
+        background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+    #nvbr > div{
+        max-height: 10vh;
+        width:5%;
+        flex:1;
+        background-image: linear-gradient(to top, #f83600 0%, #f9d423 100%);
+        border: none;  
+        flex-basis: 30vh;
+        margin-right: 12vw;
+        transition: .4s; 
+        -webkit-text-fill-color:transparent;
+        font-family: 'Acme', sans-serif;
+        font-size: 3vw;
+        text-align: center;
+        -webkit-background-clip: text;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+        #nvbr > div:nth-child(1){
+        margin-left: 15vw;
+    }
+    .hvr-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(0px) translateZ(0px);
+  transform: perspective(0px) translateZ(0px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow:visible;
+}
+.hvr-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-color: #ff9922;
+  border-style: solid;
+  border-width: 0;
+  -webkit-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-reveal:hover:before, .hvr-reveal:focus:before, .hvr-reveal:active:before {
+  -webkit-transform: translateY(180);
+  transform: translateY(1800);
+  border-width: 5px;
+}
+     #prd > div{
+         height: 100%;
+         width:100%;
+         display: none;
+        font-family: 'Acme', sans-serif;
+        text-align: center;
+        background-image: linear-gradient(0deg,#f5f7fa,#c3cfe2); 
+    }
+    #prd:hover > div{
+        display: block;
+        -webkit-text-fill-color:transparent;
+        font-size: 2.5vw;
+        transition: .4s;
+        cursor: pointer;
+    }
+    .lg{
+        height: 100%;
+        width:100%;
+        -webkit-background-clip:text;
+        background-image:linear-gradient(180deg, #2af598,#009efd);
+        position:relative;
+        top:1vh;   
+    }
+    .lg:hover{
+     background-image: linear-gradient(0deg,#f5f7fa,#c3cfe2);  
+    }
+    #prd > div:hover{
+       background-image:linear-gradient(180deg, #2af598,#009efd);
+        border-radius: 25px;
+        transition: .4s;
+        
+    }
+.cnt{
+  display: block;
+  grid-template-columns: 100% 100% 100%;
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+  border: 2px solid var(--gs0);
+  border-radius: 8px;
+  height: 100vh;
+  position: relative;
+  top: -8px;
+  left:-8px;
+}
+.cnt div {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+    .cnt div:nth-child(1) {
+  background:url("home_banner_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  color: white;
+}
+    .cnt div:nth-child(2) {
+  background:url("3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  color: white;
+}
+    .cnt div:nth-child(3) {
+  background:url("1.jpg")   ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  color: white;
+}
+    .cnt div:nth-child(4) {
+  background:url("IMG_20200213_090435.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  color: white;
+}
+    @media(max-width:700px){
+        #nvbr{
+        height:8vw;
+        width: 100vw;
+    }
+    #nvbr > div{
+        max-height: 8vw;
+        flex-basis: 38vw;
+        margin-right: 8vw;
+        font-size: 5vw;
+    }
+        #nvbr > div:nth-child(1){
+            margin-left: 13vw;
         }
-
-        #Contact {
-            color: #ff9914;
-            max-height: 5%;
-            min-width: 13%;
-            max-width: 14%;
-            background: #15db95;
-            position: absolute;
-            left: 46%;
-            top: 5px;
-            text-align: center;
-            padding-top: 9px;
-            padding-bottom: 10px;
-            font-size: 130%;
-            cursor: pointer;
-            transition: .4s;
-            font-family: 'Pacifico', cursive;
-            border-radius: 15px 15px 0px 0px;
-        }
-
-        #Gallery {
-            color: #ff9914;
-            max-height: 4.4%;
-            min-width: 12%;
-            max-width: 14%;
-            background: #15db95;
-            position: absolute;
-            left: 64%;
-            top: 5px;
-            text-align: center;
-            padding-top: 9px;
-            padding-bottom: 15px;
-            font-size: 130%;
-            cursor: pointer;
-            transition: .4s;
-            font-family: 'Pacifico', cursive;
-            border-radius: 15px 15px 0px 0px;
-        }
-
-        #Gallery:hover {
-            top: 2%;
-            transition: .4s;
-        }
-
-        #Contact:hover {
-            top: 2%;
-            transition: .4s;
-        }
-
-        #Products:hover {
-            top: 2%;
-            transition: .4s;
-        }
-
-        #Hl {
-            min-height: .9%;
-            width: 100%;
-            max-height: 1.2%;
-            background: linear-gradient(to left, red, #15db95 50%, red);
-            position: absolute;
-            top: 50px;
-            left: 0px;
-            z-index: -1;
-            transition: .4s;
-        }
-
-        #Gallery:hover+#Hl {
-            background: linear-gradient(to left, red, #15db95 35%, blue);
-            min-height: 2%;
-            max-height: 2.4%;
-            transition: .4s;
-        }
-
-        #PrdDrp:hover~#Hl {
-            background: linear-gradient(to left, blue, #15db95 65%, red);
-            min-height: 2%;
-            max-height: 2.4%;
-            transition: .4s;
-        }
-
-        #Conta:hover~#Hl {
-            min-height: 2%;
-            max-height: 2.4%;
-            transition: .4s;
-        }
-
-        #Camphor {
-            background-image: url(camphor.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            height: 120vh;
-            width: 100%;
-            background-attachment: fixed;
-            top: 220%;
-            left: 0px;
-        }
-
-        #Agarbatti {
-            background-image: url(agarbatti2.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            position: absolute;
-            height: 120vh;
-            width: 100%;
-            background-attachment: fixed;
-            top: 120%;
-            left: 0px;
-        }
-
-        #DrpPro * {
-            position: relative;
-            min-width: 160%;
-            max-width: 165%;
-            min-height: 30px;
-            background: #2d3047;
-            margin: 1%;
-            font-size: 18px;
-            padding-top: 5%;
-            padding-left: 15%;
-            color: #97cc04;
-            text-shadow: 0px 0px 2px #ecc30b;
-            transition: .2s;
-            right: 20%;
-        }
-
-        #DrpPro *:hover {
-            text-shadow: 0px 0px 10px #7fd1b9;
-            color: #f76c6c;
-            transition: .4s;
-        }
-
-        #DrpPro {
-            display: none;
-            position: absolute;
-            top: 10.5%;
-            left: 29.5%;
-            transition-delay: .4s;
-            font-family: 'Indie Flower', cursive;
-            font-size: 5%;
-            font-weight: 600;
-            cursor: url('Link.cur'),auto;
-        }
-
-        #PrdDrp:hover #DrpPro {
-            display: block;
-        }
-
-        #Fc {
-            height: 25%;
-            width: 100%;
-            background: #e3e3e3;
-            position: absolute;
-            top: 100%;
-            left: 0px;
-            z-index: 2;
-            border-radius: 20px;
-        }
-
-        img {
-            position: relative;
-            margin: 3%;
-            margin-left: 11%;
-        }
-
-        #Fd {
-            height: 16%;
-            width: 90%;
-            background: #e3e3e3;
-            position: absolute;
-            top: 218%;
-            left: 0px;
-            z-index: 2;
-            border-radius: 20px;
-            padding-top: 3%;
-            padding-left: 10%;
-            font-family: 'Pacifico', cursive;
-            font-size: 200%;
-            color: #fa292a;
-            text-shadow: 3px 3px 4px #175676;
-        }
-
-        #As {
-            height: 85vh;
-            width: 97%;
-            background: linear-gradient(132deg, #f4d038, #16a085);
-            position: absolute;
-            top: 343%;
-            left: 0px;
-            color: #f40058;
-            font-size: 200%;
-            padding-top: 15%;
-            padding-left: 4%;
-            font-family: 'Acme', sans-serif;
-            text-shadow: 0px 0px 3px #e3d985;
-        }
-
-        #pass {
-            position: absolute;
-            top: 20.5%;
-            left: 5%;
-            height: 40%;
-            width: 100%;
-            background: #3c3c3b;
-            left: 0px;
-            padding-left: 20px;
-            padding-top: 20px;
-
-        }
-
-        #iAs {
-            position: absolute;
-            top: 14.7%;
-            left: 50%;
-            height: 42.8%;
-            width: 500px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 10px #b0fe76;
-
-        }
-
-        .wrapper {
-            width: 100%;
-            min-height: 800px;
-            position: absolute;
-            display: block;
-            z-index: 3;
-            bottom: -20%;
-        }
-
-        .progressbar-wrapper {
-            width: 300px;
-            height: 60px;
-            top: 50%;
-            left: 50%;
-            position: absolute;
-            transform: translate(-50%, -50%);
-        }
-
-        .progressbar {
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transform: rotateX(-20deg) rotateY(-30deg);
-        }
-
-        .side {
-            width: 100%;
-            height: 100%;
-            background-color: rgba(254, 254, 254, 0.3);
-            top: 0;
-            left: 0;
-            position: absolute;
-        }
-
-        .bottom {
-            box-shadow: 10px 10px 50px 5px rgba(90, 90, 90, 0.7);
-            transform: rotateX(90deg);
-            transform-origin: bottom;
-        }
-
-        .top {
-            transform: translate(0, -100%) rotateX(90deg);
-            transform-origin: bottom;
-        }
-
-        .back {
-            transform: translateZ(-60px);
-        }
-
-        .left {
-            width: 60px;
-            transform: rotateY(90deg);
-            transform-origin: left;
-            background-color: rgba(225, 0, 120, 0.6);
-        }
-
-        .bar {
-            height: 100%;
-            background-color: rgba(225, 0, 120, 0.6);
-            box-shadow: 5px 5px 50px 5px rgba(225, 0, 120, 0.3);
-            animation: loaders 3s 1;
-        }
-
-        @keyframes loaders {
-            0% {
-                width: 0%;
-                background-color: rgba(41,243,223,.6);
-            }
-
-            50% {
-                width: 50%;
-                background-color: rgba(225, 0, 120, 0.6);    
-            }
-
-            65% {
-                width: 70%;
-                background-color: rgba(41,243,223,.6);
-            }
-
-            75% {
-                width: 40%;
-                background-color: rgba(225, 0, 120, 0.6);
-            }
-
-            90% {
-                width: 100%;   
-                background-color: rgba(41,243,223,.6);
-            }
-
-            100% {
-                width: 100%;
-                 background-color: rgba(41,243,223,.6);   
-            }
-        }
-
-        #Loaderbg {
-            background: #1e1b18;
-            position: absolute;
-            height: 100vh;
-            width: 100%;
-            z-index: -5;
-            top: 0px;
-            left: 0px;
-            opacity: 0;
-            animation: loadbg 3s 1;
-        }
-
-        @keyframes loadbg {
-            0% {
-                opacity: 1;
-                z-index: 2;
-            }
-
-            90% {
-                opacity: 1;
-                z-index: 2;
-            }
-
-            100% {
-                opacity: 0;
-                z-index: -5;
-            }
-        }
-        #fact img{
-            max-height: 50px;
-            position:relative;
-            bottom: 20px;
-            left: -50px;
-        }
-        #no img{
-            max-height: 40px;
-            position: relative;
-            bottom: 230px;
-            left: -50px;
-        }
-        #home img{
-            max-height: 50px;
-            position: relative;
-            bottom:130px;
-            left: -55px;
-        }
-        #home p{
-            font-size: 15px;
-            
-            position: relative;
-            bottom: 230px;
-            left: 150px;
-        }
-        #no p{
-            font-size: 15px;
-            position: relative;
-            bottom: 320px;
-            left: 150px;
-        }
-        #fact p{
-            font-size: 15px;
-            position: relative;
-            bottom: 115px;
-            left: 150px;
-        }
-        #fact{
-            padding: 0px;
-        }
-        #no{
-            padding: 0px;
-        }
-        home{
-            padding: 0px;
-        }
-    </style>
+    #prd:hover > div{
+        font-size: 3vh;
+    }
+   #prd > div:hover{
+    border-radius: 20px;   
+}
+    }
+</style>
+<title></title>
 </head>
-
-<body onload="stir0()">
-     <script>
-
- function stir0(){setTimeout(function func(){
- var bbs = new Audio('welcome.mp3');
- bbs.play();},3000);
- }
-
- </script>
-    <div id="HeadBar">JJ Industries</div>
-    <div id="PrdDrp">
-        <div id="Products">Products</div>
-        <div id="DrpPro">
-            <div d="pd" onclick="location.href='agarbatti.html'">Agarbatti</div>
-            <div id="pd" onclick="location.href='Camphot.html'">Camphor</div>
-            <div id="pd" onclick="location.href='Dhoop.html'">Dhoop Sticks</div>
-            <div id="pd" onclick="location.href='Dhoop.html'">Attar</div>
-        </div>
+<body>
+<!--scrol img-->
+<div class="cnt">
+<div id="im1"></div>
+<div id="im2"></div>
+<div id="im3"></div>
+<div id="im4"></div>
+</div>
+    <!--start-->
+<div id="nvbr" class="nv">
+<div id="prd" class="hvr-reveal">Products
+    <div id="ag"><div class="lg" onclick="window.location='agarbatti.html'">Aggarbatti</div></div>
+    <div id="cp"><div class=lg onclick="window.location='Camphot.html'">Camphor</div></div>
+    <div id="dh"><div class="lg" onclick="window.location='Dhoop.html'">Dhoop Sticks</div></div>
+    <div id="at"><div class="lg" onclick="window.location='Attar.html'">Attar</div></div>
+</div>
+<div id="cnt" class="hvr-reveal" onclick="window.location='contact.html'">Contact</div>
+<div id="glr" class="hvr-reveal" onclick="window.location='gallery.html'">Gallery</div>
+<span id="fnv"></span>
     </div>
-    <a href="Contact.html" id="Conta">
-        <div id="Contact" target="blank">Contact Us</div>
-    </a>
-    <div id="Gallery" href="gallery.html" onclick="location.href='gallery.html'">Gallery</div>
-    <div id="Hl"></div>
-    <div id="Fc"><img src="Commitment-to-innovation.png"><img src="Ethical-practices.png"><img src="Honesty-_-integrity.png"><img src="Passion-for-quality.png"> <img src="Respect-for-customers.png"></div>
-    <div id="Agarbatti"></div>
-    <div id="Camphor"></div>
-    <div id="Fd">Smell Real Fragrance... Through Our Products</div>
-    <div id="As">
-        <div id="pass">
-            <p>Believe in us , we make quality products for you.<br><br>Having prolems in selecting scented sticks or camphor cones <br>Go through our products page we will help you through...<br>
-                <br></p>
-            <div id="fact">
-                <img src=factory.png><p>: -Kalher , Bhiwandi</p></div>
-            <div id="home">
-                <img src=home.png><p>: -Lifescapes Mirage</p></div>
-            <div id="no">
-                <img src=contactno.jpg><p>: -9324334122 / 8080063442
-                </p>  </div>
-        </div>
-        <img src="bgweb.jpg" id="iAs">
-    </div>
-    <div id="Loaderbg">
-        <div class="wrapper">
-            <div class="progressbar-wrapper">
-                <div class="progressbar">
-                    <div class="side front">
-                        <div class="bar"></div>
-                    </div>
-                    <div class="side back">
-                        <div class="bar"></div>
-                    </div>
-                    <div class="side top">
-                        <div class="bar"></div>
-                    </div>
-                    <div class="side bottom">
-                        <div class="bar"></div>
-                    </div>
-                    <div class="side left"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--stop-->
+
 </body>
-
 </html>
