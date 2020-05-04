@@ -174,14 +174,28 @@
     color:darkslategrey;
     }
     .cp:hover{
-    border-radius: 1vw 1vw 1vw 1vw;
-    transform:translateX(-5px) translateY(-5px);
-    box-shadow: 5px 5px 10px 5px #00fd75;    
+    box-shadow: 0px 0px 10px 5px #00fd75;    
     }
     @media(max-width:600px){
+        .cp:hover>.im{
+        transform: scale(1.1)}
          .cp{
-             max-width: 45%;
-             max-height: 70%;
+             max-width: 47%;
+             max-height: 55%;
+             max-height: 45%;
+             border-radius:4vh 4vh 0 0; 
+            }
+            .im {
+            min-height: 150px;
+            max-width: 100%;
+            min-width: 100%;
+            max-height: 200px;
+        }
+        }
+        @media(max-width:400px){
+         .cp{
+             max-width: 80%;
+             max-height: 55%;
              min-height: 50%;
              border-radius:4vh 4vh 0 0; 
             }
