@@ -37,7 +37,7 @@
         opacity: 1;
         background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
-    #nvbr > a{
+    #nvbr > div{
         max-height: 10vh;
         width:5%;
         flex:1;
@@ -54,7 +54,7 @@
         padding-top: 5px;
         cursor: pointer;
     }
-        #nvbr > a:nth-child(1){
+        #nvbr > div:nth-child(1){
         margin-left: 15vw;
     }
     .hvr-reveal {
@@ -89,7 +89,7 @@
   transform: translateY(1800);
   border-width: 5px;
 }
-     #prd > a{
+     #prd > div{
          height: 100%;
          width:100%;
          display: none;
@@ -97,7 +97,7 @@
         text-align: center;
         background-image: linear-gradient(0deg,#f5f7fa,#c3cfe2); 
     }
-    #prd:hover > a{
+    #prd:hover > div{
         display: block;
         -webkit-text-fill-color:transparent;
         font-size: 2.5vw;
@@ -115,7 +115,7 @@
     .lg:hover{
      background-image: linear-gradient(0deg,#f5f7fa,#c3cfe2);  
     }
-    #prd > a:hover{
+    #prd > div:hover{
        background-image:linear-gradient(180deg, #2af598,#009efd);
         border-radius: 25px;
         transition: .4s;
@@ -170,19 +170,19 @@
         height:8vw;
         width: 100vw;
     }
-    #nvbr > a{
+    #nvbr > div{
         max-height: 8vw;
         flex-basis: 38vw;
         margin-right: 8vw;
         font-size: 4.5vw;
     }
-        #nvbr > a:nth-child(1){
+        #nvbr > div:nth-child(1){
             margin-left: 13vw;
         }
-    #prd:hover > a{
+    #prd:hover > div{
         font-size: 1.5vh;
     }
-   #prd > a:hover{
+   #prd > div:hover{
     border-radius: 20px;   
 }
     }
@@ -199,14 +199,14 @@
 </div>
     <!--start-->
 <div id="nvbr" class="nv">
-<a id="prd" class="hvr-reveal">Products
-    <a id="ag"><a class="lg" href="agarbatti.html">Aggarbatti</a></a>
-    <a id="cp"><a class=lg href="Camphot.html">Camphor</a></a>
-    <a id="dh"><a class="lg" href="Dhoop.html">Dhoop Sticks</a></a>
-    <a id="at"><a class="lg" href="Attar.html">Attar</a></a>
-</a>
-<a id="cnt" class="hvr-reveal" href="contact.html">Contact</a>
-<a id="glr" class="hvr-reveal" href="gallery.html">Gallery</a>
+<div id="prd" class="hvr-reveal">Products
+    <div id="ag"><div class="lg" onclick="window.location='agarbatti.html'">Aggarbatti</div></div>
+    <div id="cp"><div class=lg  onclick="window.location='Camphot.html'">Camphor</div></div>
+    <div id="dh"><div class="lg"  onclick="window.location='Dhoop.html'">Dhoop Sticks</div></div>
+    <div id="at"><div class="lg"  onclick="window.location='Attar.html'">Attar</div></div>
+</div>
+<div id="cnt" class="hvr-reveal"  onclick="window.location='contact.html'">Contact</div>
+<div id="glr" class="hvr-reveal"  onclick="window.location='gallery.html'">Gallery</div>
 <span id="fnv"></span>
     </div>
 <!--stop-->
