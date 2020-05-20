@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto</title>
+</head>
+
+<body>
+<button onclick="Custom()">Add</button>   
+<button onclick="remove()">Remove</button>
+<button onclick="Check()">Check</button>
+<button onclick="Confirm()">Confirm</button>
+</body>
+</html>
+<style></style>
+<script>
+    function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+    
+    function Confirm(){
+    alert(document.cookie);
+    }
+    
+    
+    function Check(){
+    var ck = getCookie("owNER");
+    ckr=window.atob(ck);
+    if(ckr=="jj"||ckr=="sunil"||ckr=="hiten"){
+    alert("welcome "+ckr.toUpperCase());
+    }
+        else{
+            alert("sorry Wrong Person");
+        }
+    }
+    
+    
+    
+    function remove(){
+    document.cookie="owNER=\0";
+    }
+    
+    
+    function Custom(){
+    var nme = prompt("enter Your Name");
+    nme=nme.toLowerCase();
+    console.log(nme);
+    nm = window.btoa(nme);
+    document.cookie="owNER="+nm+";";
+    }
+</script>
