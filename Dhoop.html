@@ -1,69 +1,279 @@
-<!DOCTYPE html>
-<html>
 <head>
-	<title>JJ Dhoop</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam:300&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
 	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
-	<meta name="keywords"
-		content="Nigh Coming Soon Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-    </script>
-	<link rel="stylesheet" href="css/style2.css" type="text/css" media="all" />
-	<link href="css/font-awesome1.css" rel="stylesheet">
-<style>
-        #jh{
-        color:darkslategray;
-        font-weight: 800;
+    <style>
+        body{
+        padding-left:0px;
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    }
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    #nvbr{
+        display: flex;
+        height:10vh;
+        width: 100vw;
+        position: relative;
+        margin: 0;
+        top:-8px;
+        left:-8px;
+        justify-content: space-between;
+        transition: .4s;
+        overflow: visible;
+        opacity: 1;
+        z-index: 3;
+        margin: 0;
+        background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+    #nvbr > div{
+        max-height: 10vh;
+        width:5%;
+        flex:1;
+        background-image: linear-gradient(to top, #f83600 0%, #f9d423 100%);
+        border: none;
+        flex-basis: 30vh;
+        margin-right: 12vw;
+        transition: .4s;
+        -webkit-text-fill-color:transparent;
+        font-family: 'Acme', sans-serif;
         font-size: 3vw;
-        height: 7vw;
-        width: 60vh;
-        background:orange;
         text-align: center;
-        padding-top: 1vw;
+        -webkit-background-clip: text;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+        #nvbr > div:nth-child(1){
+        margin-left: 15vw;
+    }
+    .hvr-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(0px) translateZ(0px);
+  transform: perspective(0px) translateZ(0px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow:visible;
+}
+.hvr-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-color: #ff7600;
+  border-style: solid;
+  border-width: 0;
+  -webkit-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-reveal:hover:before, .hvr-reveal:focus:before, .hvr-reveal:active:before {
+  -webkit-transform: translateY(180);
+  transform: translateY(1800);
+  border-width: 5px;
+}
+     #prd > div{
+         height: 100%;
+         width:100%;
+         display: none;
+        font-family: 'Acme', sans-serif;
+        text-align: center;
+        background-image: linear-gradient(0deg,#f5f7fa,#c3cfe2);
+    }
+    #prd:hover > div{
+        display: block;
+        -webkit-text-fill-color:transparent;
+        font-size: 2.5vw;
         transition: .4s;
         cursor: pointer;
-        border-radius: 30px 0 30px 0;
-        margin-left: 10vw;
-    }    
-    #jh:hover{
-        background:darkslategrey;
-        color:orange;
+    }
+    .lg{
+        height: 100%;
+        width:100%;
+        -webkit-background-clip:text;
+        background-image:linear-gradient(180deg, #2af598,#009efd);
+        position:relative;
+        top:1vh;
+    }
+    .lg:hover{
+     background-image: linear-gradient(0deg,#f5f7fa,#c3cfe2);
+    }
+    #prd > div:hover{
+       background-image:linear-gradient(180deg, #2af598,#009efd);
+        border-radius: 25px;
         transition: .4s;
-        font-weight: 400;
-        border-radius: 0 30px 0 30px;
+
     }
-    
-    @media(max-width:650px){
-     #jh{
-       width:45vw;  
-         margin-left: 20vw;
-         height: 8vw;
-         padding-top: 1.5vh;
+    @media(max-width:700px){
+        #nvbr{
+        height:8vw;
+        width: 100vw;
+    }
+    #nvbr > div{
+        max-height: 8vw;
+        flex-basis: 38vw;
+        margin-right: 8vw;
+        font-size: 5vw;
+    }
+        #nvbr > div:nth-child(1){
+            margin-left: 13vw;
         }
+    #prd:hover > div{
+        font-size: 3vh;
     }
+   #prd > div:hover{
+    border-radius: 20px;
+}
+    }
+    .cp{
+        min-height:370px;
+        max-width: 255px;
+        position: relative;
+        display: inline-block;
+        margin: .5%;
+        margin-left: 1.5%;
+        margin-bottom: 2%;
+        border-radius: 2vw 2.1vw 0 0;
+        box-shadow: 0px 0px 3px 3px #fda500;
+        transition: .4s;
+        font-family: 'Kalam',cursive;
+        font-size: 15px;
+       background-image: linear-gradient(to top, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+        overflow: hidden !important;
+    }
+    .im{
+       min-height:285px;
+        max-width: 260px;
+        min-width: 255px;
+        max-height: 216px;
+        transition: .6s;
+    }
+    p{
+        position: relative;
+        top: -15px;
+        margin-right:0px;
+        margin-left: 10px;
+        color:white;
+        font-weight: 600;
+        transition: .8s;
+    }
+    p:first-line{
+    font-size: 30px;
+        transition: .8s;
+    }
+    .cp:hover>.im{
+    transform: scale(1.2)}
+    .cp:hover>p:first-line{
+    color:darkslategrey;
+    }
+    .cp:hover{
+    box-shadow: 0px 0px 10px 5px #00fd75;
+    }
+    @media(max-width:600px){
+        .cp:hover>.im{
+        transform: scale(1.1)}
+         .cp{
+             max-width: 47%;
+             max-height: 55%;
+             max-height: 45%;
+             border-radius:4vh 4vh 0 0;
+            }
+            .im {
+            min-height: 150px;
+            max-width: 100%;
+            min-width: 100%;
+            max-height: 200px;
+        }
+        }
+        @media(max-width:400px){
+         .cp{
+             max-width: 80%;
+             max-height: 55%;
+             min-height: 50%;
+             border-radius:4vh 4vh 0 0;
+            }
+            .im {
+            min-height: 180px;
+            max-width: 100%;
+            min-width: 100%;
+            max-height: 200px;
+        }
+        }
     </style>
+    <title>JJ Dhoop</title>
 </head>
 
 <body>
-	<section class="w3l-coming-soon-page">
-		<div class="coming-page-info-6">
-			<div class="wrapper">
-				<div class="coming-block">
-					<h1>Coming <br>Soon</h1>
-					<p>There will be something Very Awesome</p>
-					<div id="jh" onclick="window.location='index.html'">Home</div>
-				</div>
-			</div>
-		</div>
-	</section>
-</body>
+        <!--start-->
+<div id="nvbr" class="nv">
+<div id="glr" class="hvr-reveal" onclick="window.location='index.html'">Home</div>
+<div id="prd" class="hvr-reveal">Products
+    <div id="ag"><div class="lg" onclick="window.location='agarbatti.html'">Aggarbatti</div></div>
+    <div id="cp"><div class=lg onclick="window.location='Camphot.html'">Camphor</div></div>
+    <div id="dh"><div class="lg" onclick="window.location='Dhoop.html'">Dhoop</div></div>
+    <div id="at"><div class="lg" onclick="window.location='Attar.html'">Attar</div></div>
+</div>
+<div id="cnt" class="hvr-reveal" onclick="window.location='contact.html'">Contact</div>
+<span id="fnv"></span>
+    </div>
+<!--finished-->
 
-</html>
+		<div class="cp">
+        <img src="imperial.jpeg" class="im">
+        <br>
+        <p style="top: -7px; left: -6px;">
+            Imperial Dhoop
+            <br> Type : Imperial Scented
+            <br> Type : Scented / Regular.
+            <br> Packings : Box.
+        </p>
+    </div>
+		<div class="cp">
+        <img src="tapovan.jpeg" class="im">
+        <br>
+        <p style="top: -7px; left: -6px;">
+            Tapovan Dhoop
+            <br> Type : Tapovan Scented
+            <br> Type : Scented / Regular.
+            <br> Packings : Box.
+        </p>
+    </div>
+		<div class="cp">
+        <img src="magic.jpeg" class="im">
+        <br>
+        <p style="top: -7px; left: -6px;">
+            White Magic Dhoop
+            <br> Type : Magic Scented
+            <br> Type : Scented / Regular.
+            <br> Packings : Box.
+        </p>
+    </div>
+		<div class="cp">
+        <img src="sandal.jpeg" class="im">
+        <br>
+        <p style="top: -7px; left: -6px;">
+            Sandal King Dhoop
+            <br> Type : Sandal Scented
+            <br> Type : Scented / Regular.
+            <br> Packings : Box.
+        </p>
+    </div>
+
+<div class="cp">
+        <img src="charlie.jpeg" class="im">
+        <br>
+        <p style="top: -7px; left: -6px;">
+            White Charlie
+            <br> Type : Charlie Scented
+            <br> Type : Scented / Regular.
+            <br> Packings : Box.
+        </p>
+    </div>
+</body>
